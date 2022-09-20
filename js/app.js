@@ -30,8 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function createAboutUs() {
     let ul = document.getElementById("navbar__list");
-    let li = document.createElement("li");
-    li.textContent = 'About Us';
+    let li = document.createElement("li");    
     li.setAttribute("id", "#element_1");
     ul.appendChild(li);
 });
@@ -50,8 +49,7 @@ document.addEventListener('DOMContentLoaded', function createAboutUsLink() {
 
 document.addEventListener('DOMContentLoaded',function createProjects() {
     let ul = document.getElementById("navbar__list");
-    let li = document.createElement("li");
-    // li.textContent = 'Projects';
+    let li = document.createElement("li");    
     li.setAttribute("id", "#element_2");
     ul.appendChild(li);
 });
@@ -70,8 +68,7 @@ document.addEventListener('DOMContentLoaded',function createProjectsLink() {
 
 document.addEventListener('DOMContentLoaded',function createGallery() {
     let ul = document.getElementById("navbar__list");
-    let li = document.createElement("li");
-    // li.textContent = 'Projects';
+    let li = document.createElement("li");    
     li.setAttribute("id", "#element_3");
     ul.appendChild(li);
 });
@@ -90,8 +87,7 @@ document.addEventListener('DOMContentLoaded',function createGalleryLink() {
 
 document.addEventListener('DOMContentLoaded',function createSubscribe() {
     let ul = document.getElementById("navbar__list");
-    let li = document.createElement("li");
-    // li.textContent = 'Projects';
+    let li = document.createElement("li");    
     li.setAttribute("id", "#element_4");
     ul.appendChild(li);
 });
@@ -99,14 +95,14 @@ document.addEventListener('DOMContentLoaded',function createSubscribe() {
 //createSubscribe();
 
 document.addEventListener('DOMContentLoaded', function createSubscribeLink() {
-    let liSubscribe = document.getElementById("#element_3");
+    let liSubscribe = document.getElementById("#element_4");
     let a = document.createElement("a");
     a.setAttribute("href", "#section4");
     a.textContent = "Subscribe";
     liSubscribe.appendChild(a);
 });
 
-createSubscribeLink();
+//createSubscribeLink();
 
 
 
