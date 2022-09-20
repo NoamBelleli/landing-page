@@ -22,83 +22,89 @@
  * Define Global Variables
  * 
 */
-function createAboutUs() {
-    let ul = document.getElementById("navbar_list");
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('footer').style.backgroundColor = 'purple';
+});
+
+document.addEventListener('DOMContentLoaded', function createAboutUs() {
+    let ul = document.getElementById("navbar__list");
     let li = document.createElement("li");
-    // li.textContent = 'About Us';
+    li.textContent = 'About Us';
     li.setAttribute("id", "#element_1");
     ul.appendChild(li);
-};
+});
   
-createAboutUs();
+//createAboutUs();
 
-function createAboutUsLink() {
+document.addEventListener('DOMContentLoaded', function createAboutUsLink() {
     let liAbout = document.getElementById("#element_1");
     let a = document.createElement("a");
-    a.setAttribute("href", "#Section 1");
+    a.setAttribute("href", "#section1");
     a.textContent = "About Us";
     liAbout.appendChild(a);
-};
+});
 
-createAboutUsLink();
+//createAboutUsLink();
 
-function createProjects() {
+document.addEventListener('DOMContentLoaded',function createProjects() {
     let ul = document.getElementById("navbar__list");
     let li = document.createElement("li");
     // li.textContent = 'Projects';
     li.setAttribute("id", "#element_2");
     ul.appendChild(li);
-};
+});
   
-createProjects();
+//createProjects();
 
-function createProjectsLink() {
+document.addEventListener('DOMContentLoaded',function createProjectsLink() {
     let liProjects = document.getElementById("#element_2");
     let a = document.createElement("a");
-    a.setAttribute("href", "#Section 2");
+    a.setAttribute("href", "#section2");
     a.textContent = "Projects";
     liProjects.appendChild(a);
-};
+});
 
-createProjectsLink();
+//createProjectsLink();
 
-function createGallery() {
+document.addEventListener('DOMContentLoaded',function createGallery() {
     let ul = document.getElementById("navbar__list");
     let li = document.createElement("li");
     // li.textContent = 'Projects';
     li.setAttribute("id", "#element_3");
     ul.appendChild(li);
-};
+});
   
-createGallery();
+//createGallery();
 
-function createGalleryLink() {
+document.addEventListener('DOMContentLoaded',function createGalleryLink() {
     let liGallery = document.getElementById("#element_3");
     let a = document.createElement("a");
-    a.setAttribute("href", "#Section 3");
-    a.textContent = "Projects";
+    a.setAttribute("href", "#section3");
+    a.textContent = "Gallery";
     liGallery.appendChild(a);
-};
+});
 
-createGalleryLink();
+//createGalleryLink();
 
-function createSubscribe() {
+document.addEventListener('DOMContentLoaded',function createSubscribe() {
     let ul = document.getElementById("navbar__list");
     let li = document.createElement("li");
     // li.textContent = 'Projects';
     li.setAttribute("id", "#element_4");
     ul.appendChild(li);
-};
+});
   
-createSubscribe();
+//createSubscribe();
 
-function createSubscribeLink() {
+document.addEventListener('DOMContentLoaded', function createSubscribeLink() {
     let liSubscribe = document.getElementById("#element_3");
     let a = document.createElement("a");
-    a.setAttribute("href", "#Section 3");
-    a.textContent = "Projects";
+    a.setAttribute("href", "#section4");
+    a.textContent = "Subscribe";
     liSubscribe.appendChild(a);
-};
+});
 
 createSubscribeLink();
 
