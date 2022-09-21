@@ -119,6 +119,11 @@ section {
 }
 
 @media only screen and (min-width: 35em){
+
+    button{
+        display: hidden;
+    }
+
     .landing__container {
         max-width: 50em;
         padding: 4em;
@@ -222,4 +227,18 @@ section.your-active-class .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 	}
+}
+
+@media only screen and (max-width: 600px){
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    height: 1px;
+    background-color: black;
+    margin: 5px 0;
+    border-radius: 25px;
+    width: 35px;
+    padding: 2px;
+  }
 }

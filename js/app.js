@@ -23,11 +23,6 @@
  * 
 */
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('footer').style.backgroundColor = 'purple';
-});
-
 document.addEventListener('DOMContentLoaded', function createAboutUs() {
     let ul = document.getElementById("navbar__list");
     let li = document.createElement("li");    
@@ -35,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function createAboutUs() {
     ul.appendChild(li);
 });
   
-//createAboutUs();
+
 
 document.addEventListener('DOMContentLoaded', function createAboutUsLink() {
     let liAbout = document.getElementById("#element_1");
@@ -45,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function createAboutUsLink() {
     liAbout.appendChild(a);
 });
 
-//createAboutUsLink();
+
 
 document.addEventListener('DOMContentLoaded',function createProjects() {
     let ul = document.getElementById("navbar__list");
@@ -54,7 +49,7 @@ document.addEventListener('DOMContentLoaded',function createProjects() {
     ul.appendChild(li);
 });
   
-//createProjects();
+
 
 document.addEventListener('DOMContentLoaded',function createProjectsLink() {
     let liProjects = document.getElementById("#element_2");
@@ -64,7 +59,7 @@ document.addEventListener('DOMContentLoaded',function createProjectsLink() {
     liProjects.appendChild(a);
 });
 
-//createProjectsLink();
+
 
 document.addEventListener('DOMContentLoaded',function createGallery() {
     let ul = document.getElementById("navbar__list");
@@ -73,7 +68,7 @@ document.addEventListener('DOMContentLoaded',function createGallery() {
     ul.appendChild(li);
 });
   
-//createGallery();
+
 
 document.addEventListener('DOMContentLoaded',function createGalleryLink() {
     let liGallery = document.getElementById("#element_3");
@@ -83,7 +78,7 @@ document.addEventListener('DOMContentLoaded',function createGalleryLink() {
     liGallery.appendChild(a);
 });
 
-//createGalleryLink();
+
 
 document.addEventListener('DOMContentLoaded',function createSubscribe() {
     let ul = document.getElementById("navbar__list");
@@ -92,7 +87,7 @@ document.addEventListener('DOMContentLoaded',function createSubscribe() {
     ul.appendChild(li);
 });
   
-//createSubscribe();
+
 
 document.addEventListener('DOMContentLoaded', function createSubscribeLink() {
     let liSubscribe = document.getElementById("#element_4");
@@ -102,9 +97,10 @@ document.addEventListener('DOMContentLoaded', function createSubscribeLink() {
     liSubscribe.appendChild(a);
 });
 
-//createSubscribeLink();
 
 
+
+  
 
 /**
  * End Global Variables
