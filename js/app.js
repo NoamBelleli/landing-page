@@ -33,6 +33,9 @@ const navBarItems = [
 ];
 
 const navBarList = document.getElementById("navbar__list");
+const navLi = document.querySelectorAll(".navbar__menu ul li");
+const navLinks = document.querySelectorAll("a");
+const sections = document.querySelectorAll("section");
 
 function createNavBar() {
     for (let i = 0; i < navBarItems.length; i++) {
@@ -47,12 +50,55 @@ function createNavBar() {
     }
 };
 
-createNavBar()
-/*
+createNavBar();
+
+// scroll behavior
+
+navLinks.forEach((a) => {
+    a.addEventListener("click", (e) => {    
+        e.preventDefault();
+        sections.forEach((section) => {
+             section.scrollIntoView({
+                behavior: "smooth",                
+            });
+        });
+    });
+});
 
 
 
+   
+addEventListener("scroll", () => {
+  let current = "";
+  let searching = true;
+  sections.forEach((section) => {
+    const sectionPosition = section.getBoundingClientRect();
+    const sectionHeight = section.clientHeight;
 
+    if (65 < sectionPosition.bottom && searching) {
+      searching = false;
+      section.classList.add("your-active-class");
+      navLi.forEach((li) => {
+        if (section.dataset.nav === li.textContent) {
+          li.classList.add("your-active-class");
+        }
+      });
+    } else {
+      section.classList.remove("your-active-class");
+      navLi.forEach((li) => {
+        if (section.dataset.nav === li.textContent) {
+          li.classList.remove("your-active-class");
+        }
+      });
+    }
+  });
+});
+
+
+document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("The Form Has Been Submitted Successfully");
+  });
   
 
 /**
