@@ -73,9 +73,14 @@ section {
 }
 
 .navbar__menu li {
-    display: inline-block;
+    display: inline-block;    
 }
 
+a {
+    text-decoration: none;
+    color: black
+    
+}
 .navbar__menu .menu__link {
     display: block;
     padding: 1em;
@@ -88,6 +93,10 @@ section {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
+}
+
+li.your-active-class{    
+    border: 1px solid blueviolet;
 }
 
 /* Header Styles */
@@ -214,6 +223,8 @@ section.your-active-class .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
+
+
 
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
