@@ -42,13 +42,16 @@ const sections = document.querySelectorAll("section");
 // scroll behavior
 
 navLinks.forEach((a) => {
-    a.addEventListener("click", () => {            
-        sections.forEach((section) => {
-             section.scrollIntoView({
-                behavior: "smooth",                
-            });
+  a.addEventListener("click", (e) => {
+    e.preventDefault();
+    sections.forEach((section) => {
+      if (section.dataset.nav === a.textContent) {
+        section.scrollIntoView({
+          behavior: "smooth",
         });
+      }
     });
+  });
 });
 
 
