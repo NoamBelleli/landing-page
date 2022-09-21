@@ -1,28 +1,7 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
 
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
 
-/**
- * Define Global Variables
- * 
-*/
-
+//Define Global Variables to be used in rest of code
+// array of sections to build navbar from
 
 const navBarItems = [
     { href: "#section1", text: "About Us" },
@@ -32,10 +11,14 @@ const navBarItems = [
     
 ];
 
+// variables to help with functions built later
+
 const navBarList = document.getElementById("navbar__list");
 const navLi = document.querySelectorAll(".navbar__menu ul li");
 const navLinks = document.querySelectorAll("a");
 const sections = document.querySelectorAll("section");
+
+//function to create the navBar
 
 function createNavBar() {
     for (let i = 0; i < navBarItems.length; i++) {
@@ -66,7 +49,7 @@ navLinks.forEach((a) => {
 });
 
 
-
+//adding an active class to section that is being scrolled to
    
 addEventListener("scroll", () => {
   let current = "";
@@ -94,45 +77,11 @@ addEventListener("scroll", () => {
   });
 });
 
+//form submitte succesfully
 
 document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
     alert("The Form Has Been Submitted Successfully");
   });
   
-
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
 
