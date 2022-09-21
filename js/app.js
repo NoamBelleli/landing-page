@@ -23,79 +23,32 @@
  * 
 */
 
-document.addEventListener('DOMContentLoaded', function createAboutUs() {
-    let ul = document.getElementById("navbar__list");
-    let li = document.createElement("li");    
-    li.setAttribute("id", "#element_1");
-    ul.appendChild(li);
-});
-  
 
+const navBarItems = [
+    { href: "#section1", text: "About Us" },
+    { href: "#section2", text: "Projects" },
+    { href: "#section3", text: "Gallery" },
+    { href: "#section4", text: "Subscribe" },
+    
+];
 
-document.addEventListener('DOMContentLoaded', function createAboutUsLink() {
-    let liAbout = document.getElementById("#element_1");
-    let a = document.createElement("a");
-    a.setAttribute("href", "#section1");
-    a.textContent = "About Us";
-    liAbout.appendChild(a);
-});
+const navBarList = document.getElementById("navbar__list");
 
+function createNavBar() {
+    for (let i = 0; i < navBarItems.length; i++) {
+        // cycle over navBarItems list and create li element and anchor
+       //add href and text to each element
+        const navBarItem = document.createElement("li");
+        const navBarLink = document.createElement("a");
+        navBarLink.setAttribute('href', navBarItems[i].href);
+        navBarLink.innerText = navBarItems[i].text;
+        navBarItem.appendChild(navBarLink);
+        navBarList.appendChild(navBarItem);
+    }
+};
 
-
-document.addEventListener('DOMContentLoaded',function createProjects() {
-    let ul = document.getElementById("navbar__list");
-    let li = document.createElement("li");    
-    li.setAttribute("id", "#element_2");
-    ul.appendChild(li);
-});
-  
-
-
-document.addEventListener('DOMContentLoaded',function createProjectsLink() {
-    let liProjects = document.getElementById("#element_2");
-    let a = document.createElement("a");
-    a.setAttribute("href", "#section2");
-    a.textContent = "Projects";
-    liProjects.appendChild(a);
-});
-
-
-
-document.addEventListener('DOMContentLoaded',function createGallery() {
-    let ul = document.getElementById("navbar__list");
-    let li = document.createElement("li");    
-    li.setAttribute("id", "#element_3");
-    ul.appendChild(li);
-});
-  
-
-
-document.addEventListener('DOMContentLoaded',function createGalleryLink() {
-    let liGallery = document.getElementById("#element_3");
-    let a = document.createElement("a");
-    a.setAttribute("href", "#section3");
-    a.textContent = "Gallery";
-    liGallery.appendChild(a);
-});
-
-
-
-document.addEventListener('DOMContentLoaded',function createSubscribe() {
-    let ul = document.getElementById("navbar__list");
-    let li = document.createElement("li");    
-    li.setAttribute("id", "#element_4");
-    ul.appendChild(li);
-});
-  
-
-
-document.addEventListener('DOMContentLoaded', function createSubscribeLink() {
-    let liSubscribe = document.getElementById("#element_4");
-    let a = document.createElement("a");
-    a.setAttribute("href", "#section4");
-    a.textContent = "Subscribe";
-    liSubscribe.appendChild(a);
-});
+createNavBar()
+/*
 
 
 
@@ -136,5 +89,4 @@ document.addEventListener('DOMContentLoaded', function createSubscribeLink() {
 // Scroll to section on link click
 
 // Set sections as active
-
 
