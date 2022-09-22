@@ -1,43 +1,31 @@
 
 
-//Define Global Variables to be used in rest of code
-// array of sections to build navbar from
+//Variables to use in navBar function
+//creating an array of sections to build the dynamic navigation bar
 
-const navBarItems = [
-    { id: "section1", text: "About Us" },
-    { id: "section2", text: "Projects" },
-    { id: "section3", text: "Gallery" },
-    { href: "section4", text: "Subscribe" },
-    
-];
-
-// variable to help with functions built later
 
 const navBarList = document.getElementById("navbar__list");
+const sections = document.querySelectorAll("section");
 
-
-//function to create the navBar
+//function to go over each sections data and use it to build a navigation bar
 
 function createNavBar() {
-    for (let i = 0; i < navBarItems.length; i++) {
-        // cycle over navBarItems list and create li element and anchor
-       //add href and text to each element
-        const navBarItem = document.createElement("li");
-        const navBarLink = document.createElement("a");
-        navBarLink.setAttribute('href', "#" + navBarItems[i].id);
-        navBarLink.innerText = navBarItems[i].text;        
-        navBarItem.appendChild(navBarLink);
-        navBarList.appendChild(navBarItem);
-    }
-};
+  for (let i = 0; i < sections.length; i++){
+    const navBarItem = document.createElement("li");
+    const navBarLink = document.createElement("a");    
+    navBarLink.setAttribute('href', "#" +sections[i].getAttribute("id"));
+    navBarLink.innerText = sections[i].getAttribute("data-nav");
+    navBarItem.appendChild(navBarLink);
+    navBarList.appendChild(navBarItem);
+  }
+}
 
 createNavBar();
-
+  
 // variables to help with functions built later
 
 const navLi = document.querySelectorAll(".navbar__menu ul li");
 const navLinks = document.querySelectorAll("a");
-const sections = document.querySelectorAll("section");
 
 // scroll behavior
 
@@ -56,8 +44,6 @@ navLinks.forEach((a) => {
 
 
 //adding an active class to section that is being scrolled to + matching navBar item 
-
-
 
 addEventListener("scroll", () => {  
   let searching = true;
